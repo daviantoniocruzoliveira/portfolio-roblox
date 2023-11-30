@@ -1,0 +1,372 @@
+/* Reset de estilos para remover margens e preenchimentos padrão */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Aplicar a fonte Montserrat globalmente */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #001f3f; /* Fundo azul escuro */
+    color: #ffffff; /* Texto branco */
+}
+
+/* Estilo da Navbar */
+.navbar {
+    background-color: transparent; /* Fundo transparente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilo do Logo */
+.logo {
+    font-size: 24px;
+    color: #00ff00; /* Texto verde neon */
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Espaçamento entre letras */
+    font-weight: 700; /* Negrito */
+}
+
+/* Estilo da Lista de Navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff; /* Texto branco */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #00ff00; /* Texto verde neon ao passar o mouse */
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00; /* Efeito de neon ao passar o mouse */
+}
+
+/* Estilo para tornar a Navbar responsiva */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-links {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+/* Estilo para a seção "Home" */
+.home-section {
+    background-color: #001f3f; /* Fundo azul escuro */
+    color: #ffffff; /* Texto branco */
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Estilo para o título "Davi Cruz" */
+.home-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Estilo para a descrição "Roblox Developer" */
+.home-description {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Estilo para "Open to work" */
+.home-open {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* Estilo para o texto "Davi Cruz" com efeito neon */
+.neon-text {
+    background-image: linear-gradient(45deg, #00ff00, #00ff00, #00ff00, #00ff00, #00ff00, #00ff00, #ffffff, #00ff00, #00ff00, #00ff00, #00ff00, #00ff00, #00ff00, #00ff00, #00ff00);
+    background-size: 400%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: neon-animation 2s linear infinite alternate-reverse;
+}
+
+@keyframes neon-animation {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+/* Estilo para o botão "Hire Me" */
+.hire-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0074cc; /* Azul Roblox Studio */
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.hire-button i {
+    margin-right: 5px;
+}
+
+/* Estilo para a seção "Home" */
+.home-section {
+    background-color: #001f3f; /* Fundo azul escuro */
+    color: #ffffff; /* Texto branco */
+    padding: 100px 0;
+    text-align: center;
+    position: relative; /* Para o pseudo-elemento de gradiente */
+}
+
+/* Estilo para o título "Davi Cruz" */
+.home-title {
+    font-size: 72px; /* Tamanho maior do título */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Estilo para a descrição "Roblox Developer" */
+.home-description {
+    font-size: 32px; /* Tamanho maior da descrição */
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Estilo para "Open to work" */
+.home-open {
+    font-size: 24px; /* Tamanho maior do texto "Open to work" */
+}
+
+/* Estilo para o botão "Hire Me" */
+.hire-button {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #0074cc;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 40px; /* Maior espaço entre o texto e o botão */
+    font-size: 28px; /* Tamanho maior do texto do botão */
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.hire-button:hover {
+    background-color: #0057a3;
+}
+
+/* Pseudo-elemento para adicionar gradiente */
+.home-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, #001f3f 100%);
+    z-index: -1; /* Colocar atrás do conteúdo */
+}
+/* Estilo para a seção "Home" */
+.home-section {
+    background-color: #001f3f; /* Fundo azul escuro */
+    color: #ffffff; /* Texto branco */
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ocultar conteúdo que fica fora da seção */
+}
+
+/* Estilo para o título "Davi Cruz" */
+.home-title {
+    font-size: 72px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra no texto */
+}
+
+/* Estilo para a descrição "Roblox Developer" */
+.home-description {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Estilo para "Open to work" */
+.home-open {
+    font-size: 24px;
+    color: #00ff00; /* Cor de texto verde neon */
+}
+
+/* Estilo para o botão "Hire Me" */
+.hire-button {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #0074cc;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 40px;
+    font-size: 28px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.hire-button:hover {
+    background-color: #0057a3;
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+}
+
+/* Pseudo-elemento para adicionar gradiente */
+.home-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, #001f3f 100%);
+    z-index: -1;
+}/* Estilo para o botão "Hire Me" */
+.hire-button {
+    display: inline-block;
+    position: relative; /* Necessário para posicionamento do elemento ::before */
+    padding: 20px 40px;
+    background-color: #0074cc;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 40px;
+    font-size: 28px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    overflow: hidden; /* Ocultar conteúdo que fica fora do botão */
+}
+
+/* Estilo para o elemento ::before */
+.button-bg {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #00ff00; /* Cor verde neon */
+    transition: left 0.3s ease; /* Transição suave para a posição do background */
+    z-index: -1;
+}
+
+/* Efeito ao passar o mouse */
+.hire-button:hover .button-bg {
+    left: 0; /* Animação para a posição 0 (mostrando o background) */
+}
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+    .home-section {
+        padding: 50px 0;
+    }
+    
+    .home-title {
+        font-size: 48px;
+    }
+    
+    .home-description {
+        font-size: 24px;
+    }
+    
+    .home-open {
+        font-size: 18px;
+    }
+    
+    .hire-button {
+        font-size: 24px;
+    }
+}
+
+/* Estilos para a seção de projetos */
+.projects-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px;
+}
+
+/* Estilos para os cards de projeto */
+.project-card {
+    width: 500px;
+    height: 500px;
+    background-color: transparent; /* Fundo transparente */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; /* Necessário para o gradiente */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    margin-bottom: 20px; /* Margem entre os cards */
+}
+
+/* Estilos para a miniatura do projeto */
+.project-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para preencher todo o espaço */
+    transition: transform 0.5s ease; /* Transição para a animação */
+}
+
+/* Efeito de expansão no hover */
+.project-card:hover .project-thumbnail img {
+    transform: scale(1.2); /* Aumenta o tamanho da imagem */
+}
+
+/* Animação de completar o background */
+@keyframes backgroundCompletion {
+    0% {
+        background-size: 0% 100%;
+    }
+    100% {
+        background-size: 100% 100%;
+    }
+}
+
+.project-card a {
+    color: #00ff00; /* Cor verde para os links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #007400; /* Cor mais escura ao passar o mouse */
+}
+
+/* Animação de completar o background no hover */
+.project-card:hover {
+    animation: backgroundCompletion 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
